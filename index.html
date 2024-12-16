@@ -1,0 +1,699 @@
+
+<html>
+    <head>
+        <title>Browser Calc</title>
+        
+        
+        
+        
+
+        </head>
+<body>
+        
+       <script>
+           let a = 0;
+           let b = 0;
+           let c = 0;
+           let d = 0;
+           let e = 0;
+           let min = 0;
+           let mul = 0;
+           let div = 0;
+           let moremul = 0;
+           let morediv = 0;
+           let equ =0;
+       </script>
+    <style>
+        body {background-color: grey; text-align: center;}
+    </style>   
+    
+        
+         <script>
+             function add() {
+                    b = 1;
+                    moreadd = 1;
+                    
+                if (moreadd == 1){
+                    Math.floor(a);
+                    Math.floor(d);
+                    a = Math.floor(a) + Math.floor(d);
+                    d = 0;
+                    a.toString(8);
+                    d.toString(8);
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"
+                }
+                moreadd = 1;
+                equ = 0;
+            }
+             function minus() {
+               
+                if (min !== 1){    
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "-"
+                }
+                    min = 1;
+                    moremin = 1;
+                    
+                if (moremin == 1){
+                    a = a - d;
+                    d = 0;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "-"
+                }
+                moremin = 1;
+                equ = 0;
+            }
+             function multiply() {
+               
+                if (mul !== 1){    
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "x"
+                }
+                    mul = 1;
+                    
+                if (moremul == 1 && d!==0){
+                    a = a * d;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "x"
+                d = 0;
+                }
+                    moremul = 1;
+                equ =0;
+            }
+             function divide() {
+               
+                if (div !== 1){    
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "/"
+                }
+                    div = 1;
+                    
+                if (morediv == 1 && d !==0){
+                    a = a / d;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "/"
+                d = 0;
+                
+                }
+                    morediv = 1;
+               equ = 0;
+            }
+             function res() {
+               a=0;
+               b=0;
+               c=0;
+               d=0;
+               e=0;
+               min=0;
+               mul=0;
+               div=0;
+               equ = 0;
+                let message = document.querySelector("#message");
+                message.innerHTML = 0               
+            }            
+            
+            
+             function equal() {
+                if (b == 1){
+                    a = Math.floor(a) + Math.floor(d);
+                    a.toString(8);
+                    d.toString(8);                    
+                d=0;
+                b=0;
+                c=0;
+                div=0;
+                mul=0;
+                min=0;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+              
+                }
+                if (min == 1){
+                    a = Math.floor(a) - Math.floor(d);
+                    a.toString(8);
+                    d.toString(8); 
+                d=0;
+                b=0;
+                c=0;
+                div=0;
+                mul=0;
+                min=0;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                }
+                if (mul == 1){
+                    a = Math.floor(a) * Math.floor(d);
+                    a.toString(8);
+                    d.toString(8);                    
+                d=0;
+                b=0;
+                c=0;
+                div=0;
+                mul=0;
+                min=0;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                }
+                if (div == 1 && d !== 0){
+                    a = Math.floor(a) / Math.floor(d);
+                    a.toString(8);
+                    d.toString(8);                    
+                d=0;
+                b=0;
+                c=0;
+                div=0;
+                mul=0;
+                min=0;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                }
+            equ = 1;
+            }             
+            
+            
+            
+             
+             function one() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ !==1){
+                     a = a + "1";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ !==1){
+                     a = 1;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "1";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 1;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function two() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ !==1){
+                     a = a + "2";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ !==1){
+                     a = 2;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "2";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 2;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function three() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ !==1){
+                     a = a + "3";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ !==1){
+                     a = 3;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "3";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 3;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function four() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ !==1){
+                     a = a + "4";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ !==1){
+                     a = 4;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "4";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 4;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function five() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ !==1){
+                     a = a + "5";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ !==1){
+                     a = 5;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "5";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 5;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function six() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ !==1){
+                     a = a + "6";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ !==1){
+                     a = 6;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "6";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 6;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function seven() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ !==1){
+                     a = a + "7";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ !==1){
+                     a = 7;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "7";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 7;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function eight() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ !==1){
+                     a = a + "8";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ !==1){
+                     a = 8;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "8";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 8;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function nine() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ ==0){
+                     a = a + "9";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ ==0){
+                     a = 9;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "9";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 9;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+             function zero() {
+                 if (a !== 0 && b !== 1 && min !==1 && c !== 1 && mul !==1 && div !==1 && equ ==0){
+                     a = a + "0";
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        } 
+                 if (a ==0 && b !== 1 && c !== 1 && min !==1 && mul !==1 && div !==1 && equ ==0){
+                     a = 0;
+                let message = document.querySelector("#message");
+                message.innerHTML = a
+                        }
+                 if (b ==1 && c !==1){
+                     c=1;
+                     op = "+";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + "+"  
+                        }
+                 if (min ==1 && c !==1){
+                     c=1;
+                     op = "-";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (mul ==1 && c !==1){
+                     c=1;
+                     op = "x";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }
+                 if (div ==1 && c !==1){
+                     c=1;
+                     op = "/";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op  
+                        }                        
+                        
+                 if (d !== 0 && c == 1){
+                     d = d + "0";
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                 }
+                 
+                if (d == 0 && c == 1){
+                     d = 0;
+                let message = document.querySelector("#message");
+                message.innerHTML = a + op + d
+                        }        
+        }
+
+
+    
+    
+            
+          </script>       
+    <h1>This calculator performs simple functions.</h1><br>
+    <br>
+    <h1 id ="message"> </h1><br><br>
+    
+            <button style="width:50; height:50; background-color: orange;" onclick = "one()" >1</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "two()" >2</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "three()" >3</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "add()" >+</button><br><br>
+            <button style="width:50; height:50; background-color: orange;" onclick = "four()" >4</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "five()" >5</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "six()" >6</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "minus()" >-</button><br><br>
+            <button style="width:50; height:50; background-color: orange;" onclick = "seven()" >7</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "eight()" >8</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "nine()" >9</button>
+            <button style="width:50; height:50; background-color: orange;" onclick = "multiply()" >x</button><br><br>
+            <button style="width:50; height:50; background-color: orange;" onclick = "zero()" >0</button>
+            <button style="width:105; height:50; background-color: orange;" onclick = "res()" >res</button>            
+            <button style="width:50; height:50; background-color: orange;" onclick = "divide()" >/</button><br><br>
+            <button style="width:215; height:50; background-color: orange;" onclick = "equal()" >=</button>            
+    <br>
+    <h1 id ="message"> </h1>      
+        
+        
+        
+        
+    </body>
+</html>
